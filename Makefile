@@ -2,15 +2,13 @@ CC=gcc
 CFLAGS=-O3 -std=gnu99
 PREFIX=~
 
-all: hail
-
-doc: hail.1
+all: hail hail.1
 
 hail: hail.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 hail.1: hail.md
-	test -f `which ronn` && ronn --roff $<
+	test -e `which ronn` && ronn --roff $<
 
 install: hail hail.1
 	mkdir -p $(PREFIX)/bin
