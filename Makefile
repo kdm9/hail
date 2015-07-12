@@ -1,14 +1,11 @@
-CC=gcc
-CFLAGS=-O3 -std=gnu99
-PREFIX=~
+CC      ?= gcc
+CFLAGS  +=-O3 -std=gnu99
+PREFIX ?= $(HOME)
 
-all: hail hail.1
+all: hail
 
 hail: hail.c
 	$(CC) $(CFLAGS) -o $@ $<
-
-hail.1: hail.md
-	test -e `which ronn` && ronn --roff $<
 
 install: hail hail.1
 	mkdir -p $(PREFIX)/bin
@@ -18,6 +15,3 @@ install: hail hail.1
 
 clean:
 	rm -f hail
-
-clean-all:
-	rm -f hail hail.1
