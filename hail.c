@@ -33,7 +33,7 @@
 
 /* Defined as a macro to allow use of argv[0]. */
 #define usage()                                                             \
-        fprintf(stderr, "Usage: %s <first>-<last> [<first>-<last ...]\n",   \
+        fprintf(stderr, "USAGE: %s <first>-<last> [<first>-<last ...]\n",   \
                 argv[0])
 
 int
