@@ -1,6 +1,6 @@
 CC      ?= gcc
 CFLAGS  +=-O3 -std=gnu99
-PREFIX ?= $(HOME)
+PREFIX  ?= $(HOME)
 
 all: hail
 
