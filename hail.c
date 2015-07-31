@@ -43,8 +43,8 @@ main(int argc, const char **argv)
         /* we expect at least one value, so error out if we don't have one. */
         if (res < 1) {
             putchar('\n');
-            usage();
             fflush(stdout);
+            usage();
             free(buf);
             return EXIT_FAILURE ;
         }
