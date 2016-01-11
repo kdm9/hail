@@ -39,10 +39,10 @@ Examples
     # prints 1 through 3, i.e. equivalent to `head -n 3`
     seq 1 10 | hail 1-3
 
-    # prints 3 through 5, i.e. equivalent to `head -n 5 | tail -n 3`
+    # prints 3 through 5, i.e. equivalent to `head -n 5 | tail -n 3` or `buthead 2 | head -n 3`
     seq 1 10 | hail 3-5
 
-    # prints 5 through 10, i.e. equivalent to `tail -n 6`
+    # prints 5 through 10, i.e. equivalent to `tail -n +5` or `buthead 4`
     seq 1 10 | hail 5-
 
     # prints 2, 3, 5 and 7, which is where I'll give up on my comparisons to
